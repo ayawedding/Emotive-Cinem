@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMood - Choose Your Movie</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-film"></i> Cine<span>Mood</span>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="movies.html" class="nav-link"><i class="fa-solid fa-clapperboard"></i> Movies</a>
+            <a href="watchlist.html" class="nav-link"><i class="fa-solid fa-bookmark"></i> Watchlist (<span id="watchlist-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>How are you feeling today? 🎬</h1>
+            <p>Pick your mood and discover movies that perfectly match your feelings!</p>
+            
+            <div class="mood-selector">
+                <button class="mood-btn active" data-mood="all">✨ All</button>
+                <button class="mood-btn" data-mood="happy">😄 Happy</button>
+                <button class="mood-btn" data-mood="sad">😢 Sad</button>
+                <button class="mood-btn" data-mood="action">🔥 Action</button>
+                <button class="mood-btn" data-mood="romantic">❤️ Romantic</button>
+                <button class="mood-btn" data-mood="chill">☕ Chill</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movies Grid -->
+    <main class="main-container">
+        <h2 class="section-title">Recommended Movies Today</h2>
+        <div class="movies-grid" id="movies-container"></div>
+    </main>
+
+    <!-- Trailer Modal -->
+    <div id="trailer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <div class="video-container">
+                <iframe id="trailer-iframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>CineMood &copy; 2026 - All rights reserved</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
